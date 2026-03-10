@@ -1,40 +1,301 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Unclaimz</title>
-<meta name="robots" content="noindex,nofollow">
-<style>
-body {
-font-family: Arial;
-max-width: 700px;
-margin: auto;
-padding: 40px;
-line-height: 1.6;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unclaimz | Keystone Discovery Group LLC</title>
+  <meta name="description" content="Verification page for individuals contacted regarding potential unclaimed financial assets." />
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet" />
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #1f4b99;
+      --accent-dark: #15366f;
+      --soft: #eef4ff;
+      --success-bg: #f5f9ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f7f9fb 0%, #eef2f6 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand-small {
+      font-weight: 700;
+      color: var(--accent-dark);
+      letter-spacing: 0.04em;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 38px 36px;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--accent);
+      border: 1px solid #d8e5ff;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #111827;
+    }
+
+    .subhead {
+      margin: 0 0 26px;
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .notice {
+      background: var(--success-bg);
+      border: 1px solid #cfe0ff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 30px;
+    }
+
+    .notice-title {
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin: 18px 0 12px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .panel h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #111827;
+    }
+
+    .panel p {
+      margin: 0;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .section p {
+      margin: 0 0 14px;
+      color: #374151;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .steps li {
+      margin-bottom: 10px;
+      color: #374151;
+    }
+
+    .disclaimer {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: #fafafa;
+      border: 1px solid var(--line);
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .contact {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .company {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .contact p {
+      margin: 0 0 10px;
+      color: #374151;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 720px) {
+      .card {
+        padding: 28px 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .subhead {
+        font-size: 17px;
+      }
+
+      .topbar {
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .topbar div:last-child {
+        margin-top: 4px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand-small">UNCLAIMZ</div>
+      <div>Keystone Discovery Group LLC</div>
+    </div>
 
-<h1>UNCLAIMZ</h1>
+    <div class="card">
+      <div class="eyebrow">Verification Page</div>
 
-<p>
-This website confirms the identity of the sender if you were contacted regarding
-potential unclaimed financial assets.
-</p>
+      <h1>Asset Recovery Assistance</h1>
+      <p class="subhead">
+        This website exists to confirm the identity of the sender if you received communication referencing Unclaimz regarding potential unclaimed financial assets.
+      </p>
 
-<h2>Company Information</h2>
+      <div class="notice">
+        <div class="notice-title">Why you may have been contacted</div>
+        <div>
+          Our records sometimes indicate that funds or other property may be held in the name of an individual, family member, or estate. If you were contacted by us, we are offering assistance in evaluating and pursuing a potential claim.
+        </div>
+      </div>
 
-<p>
-Keystone Discovery Group LLC<br>
-PO Box 17891<br>
-Boulder, CO 80308
-</p>
+      <div class="grid">
+        <div class="panel">
+          <h2>Who We Are</h2>
+          <p>
+            Unclaimz is a private asset recovery service operated by Keystone Discovery Group LLC.
+          </p>
+        </div>
+        <div class="panel">
+          <h2>What This Page Is For</h2>
+          <p>
+            This page is intended as a public-facing verification page for individuals who were contacted directly.
+          </p>
+        </div>
+      </div>
 
-<p>
-Unclaimz is a private asset recovery service. Individuals may file claims
-directly with state unclaimed property programs at no cost.
-</p>
+      <div class="section">
+        <h2>How the process works</h2>
+        <ol class="steps">
+          <li>We review records that may indicate unclaimed financial assets.</li>
+          <li>We assess whether an individual or estate may have a potential basis to pursue a claim.</li>
+          <li>If appropriate, assistance is offered under a written agreement.</li>
+        </ol>
+      </div>
 
+      <div class="disclaimer">
+        Services, when offered, are provided only after a written agreement is executed. Nothing on this website constitutes a guarantee of recovery or a promise that any particular claim exists or will be approved.
+      </div>
+
+      <div class="contact">
+        <h2>Contact Information</h2>
+        <div class="company">Keystone Discovery Group LLC</div>
+        <p>
+          PO Box 17891<br />
+          Boulder, CO 80308
+        </p>
+        <p>
+          Email: <a href="mailto:info@unclaimz.com">info@unclaimz.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      © Keystone Discovery Group LLC
+    </div>
+  </div>
 </body>
 </html>
